@@ -16,7 +16,7 @@ data "aws_ami" "ubuntu_ami" {
 
 resource "aws_instance" "my_ubuntu_ec2" {
     ami = data.aws_ami.ubuntu_ami.id
-    instance_type = "t3a.micro"
+    instance_type = "t3a.small"
     key_name = "Ribesh_KeyPair_Main"
     subnet_id = data.aws_subnet.default.id
     vpc_security_group_ids = [aws_security_group.dast_sg.id]
