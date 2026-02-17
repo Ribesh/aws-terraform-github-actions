@@ -7,12 +7,13 @@ push:
 
 jobs:
   terraform:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     env: 
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: us-east-1
+      AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
 
     steps:
     - name: Checkout code 
