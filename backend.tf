@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "terraform-ribesh-state-bucket"
-    key            = "dast/terraform.tfstate"
+    key            = "ec2/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
   }
